@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    kubernetes:
+      reload:
+        enabled: true
+        mode: event
+      config:
+        enabled: true
+        name: ${name}
+        namespace: default
+        sources:
+          - name: ${name}
+      client:
+        namespace: default
